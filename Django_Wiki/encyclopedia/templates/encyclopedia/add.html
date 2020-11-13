@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia-Add
+{% endblock %}
+
+{% block body %}
+    <h1>Creat New Page</h1>
+    {% if exist == True %}
+        <div class="alert alert-danger" role="alert" style="width: 80%;">
+            This title "{{ title }}" already exists. Please try another.
+        </div>    
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" class="add_form_title" name="title" placeholder="Title" autocomplete="off" required>
+        <textarea class="add_form_content" name="content" rows="25" autocomplete="off" placeholder="Enter Content in Markdown"></textarea>
+        <input type="submit" value="Submit" style="display: block;">
+    </form>
+{% endblock %}
