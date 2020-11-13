@@ -1,3 +1,3 @@
-# Project 1
+# Project Books
 
 Web Programming with Python and JavaScript
