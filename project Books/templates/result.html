@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main%}
+    <div class="search_result">
+        <p id="result-header">~ ~ ~ SEARCH RESULTS ~ ~ ~</p>
+        {% if not book_rows %}
+            <p id="no-result">Unfortunately,</br>we could not find</br>any results for your search.</p>
+        {% else %}
+            <ul id="result_list">
+                {% for i in range(0, length) %}
+                    <li>
+                        <a href="/detail?isbn={{book_rows[i]['isbn']}}" class="result_row">
+                            <span class="result_ta">ISBN:{{book_rows[i]["isbn"]}}</span>&nbsp;&nbsp;&nbsp;
+                            <span>TITLE:{{book_rows[i]["title"]}}</span>&nbsp;&nbsp;&nbsp;
+                            <span>AUTHOR:{{book_rows[i]["author"]}}</span>&nbsp;&nbsp;&nbsp;
+                            <span class="result_ta">{{book_rows[i]["year"]}}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <p id="result-footer">~ ~ ~ RESULT END ~ ~ ~</p>
+    </div>
+{% endblock %}
+
+{% block footer %}  
+    <a style="color:#273c47;" href='https://www.freepik.com/free-photos-vectors/background'>Icon vector created by freepik - www.freepik.com</a></br>
+    Data provided for free by <a style="color:#273c47;" href="https://www.goodreads.com/api">GOODREADS</a>. View <a style="color:#273c47;" href="https://www.goodreads.com/about/terms">GOODREADS’s Terms of Use</a>.
+{% endblock %}

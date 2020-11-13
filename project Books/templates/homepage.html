@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+{% block main%}
+    <div class="search_result">
+        <p class="homepage-content" style="padding-top: 2rem;">Hello, {{name[0]}}!</p> 
+        <p class="homepage-content">Welcome to Books!</p>
+        <p id="hp-header">~ ~ ~ THE MOST RECENT BOOK REVIEWS ~ ~ ~</p>
+        {% for i in range(0, length) %}
+            <ul class="detail-list1">
+                <li>USER:&nbsp;&nbsp;&nbsp;{{review_detail[i]['user_name']}} </li>
+                <li>TITLE:&nbsp;&nbsp;&nbsp;{{review_detail[i]['title']}} </li>
+                <li>ISBN:&nbsp;&nbsp;&nbsp;{{review_detail[i]['isbn']}}</li>
+                <li>RATE:&nbsp;&nbsp;&nbsp;{{review_detail[i]['rate']}}</li>
+                <li>REVIEW:&nbsp;&nbsp;&nbsp;{{review_detail[i]['review']}}</li>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block footer %}  
+    <a style="color:#273c47;" href='https://www.freepik.com/free-photos-vectors/background'>Icon vector created by freepik - www.freepik.com</a></br>
+    Data provided for free by <a style="color:#273c47;" href="https://www.goodreads.com/api">GOODREADS</a>. View <a style="color:#273c47;" href="https://www.goodreads.com/about/terms">GOODREADS’s Terms of Use</a>.
+{% endblock %}

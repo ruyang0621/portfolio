@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Detail
+{% endblock %}
+
+{% block main%}
+    <div class="search_detail_outter">
+        <div class="search_detail"> 
+            <p class="detail-header">~ ~ ~ BOOK DETAIL FROM GOODREADS ~ ~ ~</p>
+                <ul class="detail-list">
+                    <li>ID:&nbsp;&nbsp;&nbsp;{{id[0]}}</li>
+                    <li>TITLE:&nbsp;&nbsp;&nbsp;{{name_book[0]}}</li>
+                    <li>ISBN:&nbsp;&nbsp;&nbsp;{{book_detail['books'][0]['isbn']}}</li>
+                    <li>ISBN13:&nbsp;&nbsp;&nbsp;{{book_detail['books'][0]['isbn13']}}</li>
+                    <li>RATINGS COUNT:&nbsp;&nbsp;&nbsp;{{book_detail['books'][0]['ratings_count']}}</li>
+                    <li>REVIEWS COUNT:&nbsp;&nbsp;&nbsp;{{book_detail['books'][0]['reviews_count']}}</li>
+                    <li>TEXT REVIEWS COUNT:&nbsp;&nbsp;&nbsp;{{book_detail['books'][0]['text_reviews_count']}}</li>
+                    <li>WORK REVIEWS COUNT:&nbsp;&nbsp;&nbsp;{{book_detail['books'][0]['work_reviews_count']}}</li>
+                    <li>WORK TEXT REVIEWS COUNT:&nbsp;&nbsp;&nbsp;{{book_detail['books'][0]['work_text_reviews_count']}}</li>
+                    <li>AVERAGE RATING:&nbsp;&nbsp;&nbsp;{{book_detail['books'][0]['average_rating']}}</li>
+                </ul>
+            <p class="detail-footer">~ ~ ~ DETAIL END ~ ~ ~</p>
+        </div>
+        <div class="search_detail">
+            <form class="was-validated" method="post">
+                <div class="search_select_content" id="select_detail">
+                    <div class="select_search">
+                        <input name="select_search" value="1" type="radio">
+                        <label for="1">1</label>
+                    </div>
+                    <div class="select_search">
+                        <input class="select_search" name="select_search" value="2" type="radio">
+                        <label for="2">2</label>
+                    </div>
+                    <div class="select_search">
+                        <input class="select_search" name="select_search" value="3" type="radio">
+                        <label for="3">3</label>
+                    </div>
+                    <div class="select_search">
+                        <input class="select_search" name="select_search" value="4" type="radio">
+                        <label for="4">4</label>
+                    </div>
+                    <div class="select_search">
+                        <input class="select_search" name="select_search" value="5" type="radio">
+                        <label for="5">5</label>
+                    </div>
+                </div>
+                <div class="form-group, detail-group">
+                    <label class="detail-label" for="exampleFormControlTextarea1" style="text-align: center;">BOOK REVIEW</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="review" rows="5"></textarea>
+                    <input type="hidden" name="isbnid" value="{{book_detail['books'][0]['isbn']}}">
+                </div>
+                <button class="btn btn-outline-secondary detail-btn" id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="search_detail">
+            {% if not review_detail %}
+                <p class="detail-header">~ ~ ~ BOOK REVIEWS ~ ~ ~</p>
+                    <p class="detail-no-comment">This book has not received comment yet.</p>
+                <p class="detail-footer">~ ~ ~ REVIEWS END ~ ~ ~</p>
+            {% else %}
+                <p class="detail-header">~ ~ ~ BOOK REVIEWS ~ ~ ~</p>
+                {% for i in range(0, length) %}
+                    <ul class="detail-list1">
+                        <li>USER:&nbsp;&nbsp;&nbsp;{{review_detail[i]['user_name']}} </li>
+                        <li>TITLE:&nbsp;&nbsp;&nbsp;{{name_book[0]}}</li>
+                        <li>ISBN:&nbsp;&nbsp;&nbsp;{{review_detail[i]['isbn']}}</li>
+                        <li>RATE:&nbsp;&nbsp;&nbsp;{{review_detail[i]['rate']}}</li>
+                        <li>REVIEW:&nbsp;&nbsp;&nbsp;{{review_detail[i]['review']}}</li>
+                    </ul>
+                {% endfor %}
+                <p class="detail-footer">~ ~ ~ REVIEWS END ~ ~ ~</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}  
+    <a style="color:#273c47;" href='https://www.freepik.com/free-photos-vectors/background'>Icon vector created by freepik - www.freepik.com</a></br>
+    Data provided for free by <a style="color:#273c47;" href="https://www.goodreads.com/api">GOODREADS</a>. View <a style="color:#273c47;" href="https://www.goodreads.com/about/terms">GOODREADS’s Terms of Use</a>.
+{% endblock %}

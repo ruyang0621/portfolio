@@ -1,0 +1,287 @@
+.index-body {
+    background-image: url(header-B1.jpg);
+}
+
+.header {
+    max-width: unset;
+    background-color: #49ae47;
+    position: fixed;
+    top: 0;
+    line-height: 1rem;
+}
+
+.book {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.btn-style { 
+    color: #273c47;
+}
+
+.btn-style:hover {
+    color: black;
+}
+.column-i {
+    font-family: 'Odibee Sans', cursive;
+    display: flex;
+}
+
+.link-h {
+    justify-content: center;
+}
+
+.navbar-nav {
+    width:100%;
+    font-size: 1.7rem;
+    flex-direction: row-reverse;
+    margin-top: 7.5rem;
+}
+
+.nav-item {
+    padding:0.5rem;
+}
+
+.content-main {
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+    height: 100vh;
+    margin-top: 9rem;
+    display: flex;
+}
+
+.small {
+    background-color: #49ae47;
+    overflow: auto;
+    background-size: cover;
+    font-family: 'Odibee Sans', cursive;
+    color: #273c47;
+    height: 6rem;
+}
+
+.footer {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.sub-content {
+    margin: auto;
+    font-family: 'Odibee Sans', cursive;
+    color: #273c47;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    width: 600px;
+    height: 400px;
+}
+
+.btn-outline-primary {
+    color: #49ae47;
+    border-color: #49ae47;
+}
+
+.btn-outline-primary:hover {
+    background-color: #49ae47;
+    border-color: #49ae47;
+}
+
+.btn-outline-secondary {
+    color: #40a8d5;
+    border-color: #40a8d5;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #40a8d5;
+    border-color: #40a8d5;
+}
+
+.btn {
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: .375rem 1.5rem;
+}
+
+.form-control {
+    display: unset;
+    width: 70%;
+    height: 4rem;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 2.5rem;
+}
+
+#register-form {
+    height: 500px;
+}
+
+#border {
+    width: 80%;
+    margin: auto;
+}
+
+.search_select_content {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.search_result {
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 1.5rem;
+    color: #273c47;
+    background: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    min-height: 60%;  
+    height: fit-content;
+}
+
+#result_list {
+    text-align: center;
+    list-style: inside;
+    min-height: 5rem;
+}
+
+#result-header {
+    text-align: center;
+    padding-top: 2rem;
+    color:#273c47;
+    font-size: 2rem;
+    margin-block-end: 0rem;
+}
+
+#result-footer {
+    text-align: center;
+    padding-bottom: 2rem;
+    color:#273c47;
+    font-size: 2rem;
+    margin-block-end: 0rem;
+}
+
+.result_row {
+    color: #273c47;
+}
+
+a.result_row:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.result_ta {
+    color:#4c5b63; 
+    font-size:1.2rem;
+}
+
+#result_list li{
+    padding: 1rem 0;
+}
+
+#no-result {
+    text-align: center;
+    color:#273c47;
+    font-size: 2rem;
+    margin-block-end: 2rem;
+    margin-block-start: 2rem;
+}
+
+.search_detail_outter{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.search_detail {
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 1.5rem;
+    color: #273c47;
+    background: rgba(255, 255, 255, 0.8);
+    width: 60%;
+    min-height: 35rem;  
+    height: fit-content;
+}
+
+.detail-header {
+    text-align: center;
+    padding-top: 2rem;
+    color:#273c47;
+    font-size: 2rem;
+    margin-block-end: 0rem;
+}
+
+.detail-footer {
+    text-align: center;
+    padding-bottom: 2rem;
+    color:#273c47;
+    font-size: 2rem;
+    margin-block-end: 0rem;
+}
+
+.detail-list {
+    list-style: inside;
+    min-height: 10rem;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.detail_list li {
+    padding: 1rem 0;
+}
+
+.detail-label {
+    display: block;
+}
+
+#select_detail {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+.form-control {
+    display: block;
+    margin: 0 auto;
+}
+
+.detail-btn {
+    display: block;
+     margin: 2rem auto;
+    
+}
+
+.detail-no-comment {
+    text-align: center;
+    padding: 5rem;
+    color:#273c47;
+    font-size: 2rem;
+}
+
+.detail-list1 {
+    list-style: inside;
+    min-height: 10rem;
+    margin: 2rem auto;
+    width: 80%;
+    border-top: 0.3rem dashed #49ae47;
+}
+
+.homepage-content {
+    text-align: center;
+    margin: 0 0;
+    color:#273c47;
+    font-size: 2rem;
+}
+
+#hp-header {
+    text-align: center;
+    color:#273c47;
+    font-size: 2rem;
+    margin-top: 1rem;
+}

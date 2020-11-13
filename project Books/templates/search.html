@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main%}
+    <form class="sub-content" action="/search" method="post">
+        <div class="form-group" style="margin-top: 6rem;">
+            <div class="search_select_content">
+                <div class="select_search">
+                    <input name="select_search" value="isbn" type="radio">
+                    <label for="isbn">ISBN</label>
+                </div>
+                <div class="select_search">
+                    <input class="select_search" name="select_search" value="title" type="radio">
+                    <label for="title">TITLE</label>
+                </div>
+                <div class="select_search">
+                    <input class="select_search" name="select_search" value="author" type="radio">
+                    <label for="author">AUTHOR</label>
+                </div>
+            </div>
+            <input autocomplete="off" autofocus class="form-control" name="keyword" placeholder="KEYWORD" type="text">
+        </div>
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+{% endblock %}
+
+{% block footer %}  
+    <a style="color:#273c47;" href='https://www.freepik.com/free-photos-vectors/background'>Icon vector created by freepik - www.freepik.com</a></br>
+    Data provided for free by <a style="color:#273c47;" href="https://www.goodreads.com/api">GOODREADS</a>. View <a style="color:#273c47;" href="https://www.goodreads.com/about/terms">GOODREADS’s Terms of Use</a>.
+{% endblock %}
