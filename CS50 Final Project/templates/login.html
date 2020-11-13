@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block main%} 
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="form-group" id="loginContainer">
+                <div class="form-content">
+                    <p class="sub-content-text">Log In</p>
+                    <div class="form-detail">
+                        <div class="form-submit-detail">
+                            {{ form.email.label(class="form-label-text") }}
+                            {% if form.email.errors %}
+                                {{ form.email(class="form-label-input is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.email.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.email(class="form-label-input") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-submit-detail">
+                            {{ form.password.label(class="form-label-text") }}
+                            {% if form.password.errors %}
+                                {{ form.password(class="form-label-input is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.password.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.password(class="form-label-input") }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-btn">
+                    {{ form.submit(class="btn btn-primary btn-submit-page") }}
+                </div>
+                <div class="login-footer">
+                    <small class="form-footer">
+                        Need An Account? 
+                        <a href="{{ url_for('register') }}" style="padding-left: 5px">Sign Up Now</a>
+                    </small>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

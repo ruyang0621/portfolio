@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block main %} 
+    <form action="/search" method="post" class="search-form">
+        <div class="date-input">
+            <label class="search-label" for="start">Start Date:</label>
+            <input type="date" id="startDate" name="trip-start" min max required onchange="datePickHandler(event);" >
+        </div>
+        <div class="date-input">
+            <label class="search-label" for="end">End Date:</label>
+            <input type="date" id="endDate" name="trip-end" min max required onchange="datePickHandler(event);">
+        </div>
+        <div class="data-input">
+            <label class="search-label" for="keyword">Keyword:</label>
+            <input autocomplete="off" autofocus class="form-control" name="keyword" type="text" required >
+        </div>
+        <button class="btn-primary btn-search" type="submit">Search</button>
+    </form>
+    <script>
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1;
+        var yyyy = today.getFullYear();
+        if(dd<10){
+            dd='0'+dd
+        } 
+        if(mm<10){
+            mm='0'+mm
+        }
+        today = yyyy+'-'+mm+'-'+dd;
+        mindate = yyyy-1+'-'+mm+'-'+dd;
+        document.getElementById("endDate").setAttribute("max", today);
+        document.getElementById("endDate").setAttribute("min", mindate);
+        document.getElementById("startDate").setAttribute("max", today);
+        document.getElementById("startDate").setAttribute("min", mindate);
+    </script>
+
+    <!---Date picked handler-->
+    <script>
+        const startDate = document.getElementById('startDate');
+        const endDate = document.getElementById('endDate');
+        function datePickHandler(e){
+            let sData = startDate.value;
+            let eData = endDate.value;
+
+            if(sData && eData){
+                if(sData > eData){
+                    alert('End Date Invalid.')
+                    endDate.value= sData;
+                }
+            }
+        }
+    </script>
+
+{% endblock %}

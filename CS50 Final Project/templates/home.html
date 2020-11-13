@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block main %} 
+    <div class="home-topnews" id="topnews">
+        <p class="result-header-end"> ~ ~ ~ Top Headlines in The US ~ ~ ~</p>
+        <div class="home-li">
+            <ul class="home-list">
+                {% for i in range(10) %}
+                    <li class="home-detail">
+                        
+                        <a href="{{top_headlines['articles'][i]['url']}}" class="home_row">
+                            <div class="result-row-title">{{top_headlines['articles'][i]['title']}}</div>
+                        </a>
+                        <a href="{{top_headlines['articles'][i]['url']}}" class="home_row">
+                            <div class="result-row-content">{{top_headlines['articles'][i]['description']}}</div>
+                        </a> 
+                        
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <p class="result-header-end"> ~ ~ ~ Results End ~ ~ ~</p>
+        <footer class="small">
+            <p>
+                Data Provided for Free by <a href='https://newsapi.org/'>NEWS API</a>. 
+                View <a href="https://newsapi.org/terms">NEWS API's Terms of Use</a>.
+            </p>
+        </footer>
+    </div>
+{% endblock %}

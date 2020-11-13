@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block main%} 
+    <div class="content-section">
+        <form method="POST" action="" id="register-form">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <div class="form-content">
+                    <p class="sub-content-text">Join Today</p>
+                    <div class="form-detail" >
+                        <div class="form-submit-detail">
+                            {{ form.username.label(class="form-label-text") }}
+                            {% if form.username.errors %}
+                                {{ form.username(class="form-label-input is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.username.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.username(class="form-label-input") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-submit-detail">
+                            {{ form.email.label(class="form-label-text") }}
+                            {% if form.email.errors %}
+                                {{ form.email(class="form-label-input is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.email.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.email(class="form-label-input") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-submit-detail">
+                            {{ form.password.label(class="form-label-text") }}
+                            {% if form.password.errors %}
+                                {{ form.password(class="form-label-input is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.password.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.password(class="form-label-input") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-submit-detail">
+                            {{ form.confirm_password.label(class="form-label-text") }}
+                            {% if form.confirm_password.errors %}
+                                {{ form.confirm_password(class="form-label-input is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.confirm_password.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.confirm_password(class="form-label-input") }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-btn">
+                    {{ form.submitBtn(class="btn btn-primary btn-submit-page", id="register") }}
+                </div>
+                <div class="register-footer">
+                    <small class="form-footer">
+                        Already Have An Account? 
+                        <a href="{{ url_for('login') }}" style="padding-left: 5px">Sign In</a>
+                    </small>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        const sbBtn = document.getElementById('register');
+        sbBtn.addEventListener('click', checkAjax);
+    
+        function checkAjax(event){
+            event.preventDefault();
+            const rForm = document.getElementById('register-form');
+            var vali = rForm.checkValidity();
+    
+            if(vali){
+                $.ajax({
+                    url:'/check',
+                    data: $('#register-form').serialize(),
+                    type: 'POST',
+                    success: function(response){
+                        if(response == 'success'){
+        			        document.getElementById('register-form').submit();
+        			        console.log('this is success');
+        			    }else{
+        			        alert('Username/Email is not available');
+        			    }
+
+        			},
+        			error: function(error){
+        				console.log(error);
+        			}
+        		});
+            }
+            else {
+                rForm.reportValidity();
+            }
+        }
+    </script>
+{% endblock %}

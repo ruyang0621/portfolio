@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block main %} 
+    <div class="search-history">
+        <p class="result-header-end"> ~ ~ ~ Your Search History ~ ~ ~</p>
+            {% if not rows %}
+                <p class="no-result">You do not have</p>
+                <p class="no-result">any search histories.</p>
+            {% else %}
+                <table class="history-table">
+                    <tr class="history-table-header">
+                        <th class="table-cell">Keyword</th>
+                        <th class="table-cell">Start Date</th>
+                        <th class="table-cell">End Date</th>
+                        <th class="table-cell">Date & Time</th>
+                    </tr>
+                    {% for i in range(0, length) %}
+                    <tr tr class="history-table-row">
+                        <td class="table-cell">{{rows[i]["keyword"]}}</td>
+                        <td class="table-cell">{{rows[i]["d_start"]}}</td>
+                        <td class="table-cell">{{rows[i]["d_end"]}}</td>
+                        <td class="table-cell">{{rows[i]["mydate"]}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% endif %}
+        <p class="result-header-end"> ~ ~ ~ Results End ~ ~ ~</p>
+        <footer class="small">
+            <p>
+                Data Provided for Free by <a href='https://newsapi.org/'>NEWS API</a>. 
+                View <a href="https://newsapi.org/terms">NEWS API's Terms of Use</a>.
+            </p>
+        </footer>
+    </div>
+{% endblock %}

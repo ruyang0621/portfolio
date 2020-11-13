@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block main%} 
+<div class="sub-content">
+    <p class="sub-content-text sub-text-top">Search</p>
+    <p class="sub-content-text">Worldwide News</p>
+    <div class="group-btn">
+        <a href="{{ url_for('login') }}" class="btn btn-primary">Login</a>
+        <a href="{{ url_for('register') }}" class="btn btn-primary">Register</a>
+    </div>
+</div>
+{% endblock %}

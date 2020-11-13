@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block main %} 
+    <div class="search_result">
+        <p class="result-header-end"> ~ ~ ~ Search Results ~ ~ ~</p>
+        {% if not all_articles['articles'] %}
+            <p class="no-result">Unfortunately,</p>
+            <p class="no-result">we could not find</p>
+            <p class="no-result">any results for your search.</p>
+        {% else %}
+            <div class="result-li">
+                <ol id="result_list">
+                    {% if length <= 10 %}
+                        {% for i in range(0, length) %}
+                            <li class="result-detail">
+                                <a href="{{all_articles['articles'][i]['url']}}" class="result_row">
+                                    <div class="result-row-title">{{all_articles['articles'][i]['title']}}</div>
+                                </a>
+                                <a href="{{all_articles['articles'][i]['url']}}" class="result_row">
+                                    <div class="result-row-content">{{all_articles['articles'][i]['description']}}</div>
+                                </a> 
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        {% for i in range(0, 10) %}
+                            <li class="result-detail">
+                                <a href="{{all_articles['articles'][i]['url']}}" class="result_row">
+                                    <div class="result-row-title">{{all_articles['articles'][i]['title']}}</div>
+                                </a>
+                                <a href="{{all_articles['articles'][i]['url']}}" class="result_row">
+                                    <div class="result-row-content">{{all_articles['articles'][i]['description']}}</div>
+                                </a> 
+                            </li> 
+                        {% endfor %}
+                    {% endif %}        
+                </ol>
+            </div>>
+        {% endif %}
+        <p class="result-header-end"> ~ ~ ~ Results End ~ ~ ~</p>
+        <footer class="small">
+            <p>
+                Data Provided for Free by <a href='https://newsapi.org/'>NEWS API</a>. 
+                View <a href="https://newsapi.org/terms">NEWS API's Terms of Use</a>.
+            </p>
+        </footer>
+    </div>
+{% endblock %}
