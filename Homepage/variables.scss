@@ -1,0 +1,46 @@
+$font-family: 'Archivo Black', sans-serif;
+$font-weight: bold;
+$padding-top: 2rem;
+$margin-left: 12rem;
+$color: #b57382;
+
+.my-column {
+    font-family: $font-family;
+    padding-top: $padding-top;
+    font-weight: $font-weight;
+}
+
+.nav-bar {
+    font-family: $font-family;
+    font-weight: $font-weight;
+}
+
+#resume {
+    font-family: $font-family;
+    margin-left: $margin-left;
+
+    td{
+        width: 50%;
+        vertical-align: top;
+    }
+}
+
+#interest_list {
+    margin-left: $margin-left;
+    font-family: $font-family;
+
+    ul{
+        li{
+            padding:0.5rem;
+        }
+    }  
+}
+
+#image_i {
+    margin-left: $margin-left;
+}
+
+#contact_t {
+    margin-left: $margin-left;
+    font-family: $font-family;
+}

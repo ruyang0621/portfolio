@@ -1,0 +1,38 @@
+.my-column {
+  font-family: "Archivo Black", sans-serif;
+  padding-top: 2rem;
+  font-weight: bold;
+}
+
+.nav-bar {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: bold;
+}
+
+#resume {
+  font-family: "Archivo Black", sans-serif;
+  margin-left: 12rem;
+}
+#resume td {
+  width: 50%;
+  vertical-align: top;
+}
+
+#interest_list {
+  margin-left: 12rem;
+  font-family: "Archivo Black", sans-serif;
+}
+#interest_list ul li {
+  padding: 0.5rem;
+}
+
+#image_i {
+  margin-left: 12rem;
+}
+
+#contact_t {
+  margin-left: 12rem;
+  font-family: "Archivo Black", sans-serif;
+}
+
+/*# sourceMappingURL=variables.css.map */

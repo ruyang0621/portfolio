@@ -1,0 +1,290 @@
+.icon {
+    font-family: 'Archivo Black', sans-serif;
+    color:white;
+    background-color: #500825;
+    position: absolute;
+    margin-top: 3rem;
+    margin-left: 4rem;
+    padding: 1.5rem;
+    width: 6rem;
+    text-align: center;
+    border: 1px solid #500825;
+    border-radius: 50%
+}
+
+.my-header {
+    background-attachment: fixed;
+    background-position: center top;
+    background-image: url('picture/orange.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 2rem;
+    color: #500825;
+    top: 0;
+    width: 100%;
+} 
+.flex-column {
+    height: 100%;
+    position: fixed;
+    overflow: scroll;
+}
+
+#picture {
+    margin-left: 10rem;
+    padding: 4rem;
+}   
+
+.nav-bar { 
+    float: left;
+    padding: 2rem 1rem;
+}
+
+.nav-item {
+    line-height: 2rem;
+    border-bottom: 0.1rem solid #9b414d;
+}
+
+a {
+    color: #6f364d;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: #b57382;
+}
+
+.nav-link.disabled {
+    color: #b57382;  
+}
+
+.index_p {
+    filter: opacity(80%);
+}
+
+.index_w {
+    bottom: 6rem;
+    font-family: "Archivo Black", sans-serif;
+    color: #fffef2;
+    text-align: unset;
+    padding-left: 4rem;
+}
+
+.resume_cell {
+    margin-top: 3rem;
+}
+
+.cell_header {
+    font-size: 2rem;
+    color: #6f364d;
+}
+
+.cell_r {
+    width: 30rem;
+}
+
+.cell_body {
+    font-size:1.2rem;
+    color: #b57382;
+}
+
+#dog_i1 {
+    padding-left: 5rem;
+}
+
+:focus {
+    outline:unset;
+}
+
+#interest_list {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list_header {
+    color: #6f364d;
+}
+
+.list_body {
+    color: #b57382;
+    font-size: 1.2rem;
+}
+
+#image_i {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact_t {
+    margin-top: 3rem;
+    display:flex;
+    justify-content: center;
+}
+
+.cell_ct {
+    margin:0.5rem;
+}
+
+#t11{
+    background-color: #b57382;
+}
+
+#t22 {
+    background-color: #923349;
+}
+
+#t32 {
+    background-color: #500825;
+}
+
+#t11, #t22, #t32 {
+    font-size: 1.2rem;
+    color: #fffef2;
+    display: flex;
+    align-items: center;
+
+}
+
+#t11 p, #t22 p, #t32 p{
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .icon {
+        width: 3rem;
+        height: 3rem;
+        margin-top: 1.5rem;
+        margin-left: 2rem;
+        padding: 0.75rem;  
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+        padding: unset;
+    }
+
+    #column2 {
+        padding-top: unset;
+    }
+    #column1 {
+        padding-top: 2rem;
+    }
+
+    .nav-link {
+        font-size: 0.6rem;
+    }
+
+    .nav-bar {
+        padding: unset;
+        position: absolute;
+    }
+
+    .nav-item {
+        border: unset;
+    } 
+
+    .flex-column {
+        flex-direction: row!important;
+        width: 100%;
+        height: unset;
+        justify-content: space-around;
+        background-color: #efc67d;
+        padding: 0.5rem;
+        bottom:0rem;
+    }
+
+    #picture {
+        margin: 2rem;
+        padding: unset;
+    }
+
+    .index_w {
+        display:unset!important;
+        bottom: 2rem; 
+        padding-left: 2rem;
+    }
+
+    h5, p {
+        font-size: 0.5rem;
+        font-weight: 100;
+    }
+
+    .cell_header {
+        font-size: 1rem;
+    }
+    .cell_body {
+        font-size: 0.75rem;
+    }
+    
+    #resume {
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .resume_cell {
+        margin-top: 1rem;
+    }
+
+    #resume tr{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #dog_i {
+        width: 5rem;
+        height: 5rem;
+        
+    }
+
+    #dog_i1 {
+        padding-left: 2rem;
+    }
+
+    .cell_r {
+        width: 20rem;
+    }
+
+    #interest_list {
+        margin-left: 2rem;
+    }
+
+    #image_i {
+        margin-left: 2rem;
+    }
+
+    .list_header {
+        font-size: 1rem;
+    }
+
+    .list_body {
+        font-size: 0.75rem;
+    }
+
+    #swimming, #beetles, #travel {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #interest_list ul li {
+        padding: 0.5rem 0rem;
+    }
+
+    #t11, #t21, #t22, #t23, #t32 {
+        height: 6rem!important;
+        width: 6rem!important;
+    }
+
+    #t12, #t31 {
+        height: 12.5rem!important;
+        width: 6rem!important;
+    }
+
+    #contact_t {
+        margin-left: unset;
+    }
+}

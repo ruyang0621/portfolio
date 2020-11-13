@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">    
+        <link href="variables.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        
+        <title>INTEREST</title>
+    </head>
+    <body style="background:#fffef2;">
+        <div class="my-header"> 
+            <div class="container my-container">
+                <div class="row my-row">
+                    <div class="col-4 icon">
+                        <h1 style="margin:0;">R.</h1>
+                    </div>
+                    <div class="col-4 offset-4 my-column" id="column1">
+                        <h1>Interest</h1>
+                    </div>
+                </div>
+                <div class="row my-row">
+                    <div class="col-6 offset-4 my-column" id="column2">
+                        <h4>Insterest & Leisure Activities</h4>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <main>
+            <nav class="nav-bar">
+                <div class="nav flex-column">
+                    <div class="nav-item">
+                        <a class="nav-link" href="index.html">ABOUT ME</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="resume.html">RESUME</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link disabled" href="interest.html" tabindex="-1" aria-disabled="true">INTEREST</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="contact.html">CONTACT</a>
+                    </div>
+                </div> 
+            </nav>
+            <div id="interest_list">
+                <div id="sport">
+                    <h3 class="list_header">Sport</h3>
+                    <ul class="list_body"><li>Swimming</li><li>Hiking</li><li>Jogging</li></ul>
+                </div>
+                <div id="music">
+                    <h3 class="list_header">Music</h3>
+                    <ul class="list_body"><li>Beetles</li><li>Green Day</li><li>Cold Play</li></ul>
+                </div>
+                <div id="hobby">
+                    <h3 class="list_header">Hobby</h3>
+                    <ul class="list_body"><li>Reading</li><li>Drawing</li><li>Travel</li></ul>
+                </div>
+            </div>
+            <div id="image_i">
+                <img src="picture/swimming.jpg" alt="dog" width="180" height="180" style="border-radius:50%" id="swimming">
+                <img src="picture/beetles.jpg" alt="beetles" width="180" height="180" style="border-radius:50%" id="beetles">
+                <img src="picture/travel.jpg" alt="travel" width="180" height="180" style="border-radius:50%" id="travel">
+            </div>
+        </main>
+        <script>
+            document.getElementById("swimming").onmouseover = function() {mouseOver()};
+            document.getElementById("swimming").onmouseout = function() {mouseOut()};
+
+            function mouseOver() {
+                document.getElementById("swimming").src = "picture/dog_run.jpg"
+            }
+            function mouseOut() {
+                document.getElementById("swimming").src = "picture/swimming.jpg"
+            }
+
+            document.getElementById("beetles").onmouseover = function() {mouseOver1()};
+            document.getElementById("beetles").onmouseout = function() {mouseOut1()};
+
+            function mouseOver1() {
+                document.getElementById("beetles").src = "picture/album.jpg"
+            }
+            function mouseOut1() {
+                document.getElementById("beetles").src = "picture/beetles.jpg"
+            }
+
+            document.getElementById("travel").onmouseover = function() {mouseOver2()};
+            document.getElementById("travel").onmouseout = function() {mouseOut2()};
+
+            function mouseOver2() {
+                document.getElementById("travel").src = "picture/paint.jpg"
+            }
+            function mouseOut2() {
+                document.getElementById("travel").src = "picture/travel.jpg"
+            }
+        </script>
+    </body>
+</html>
